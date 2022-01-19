@@ -1,0 +1,37 @@
+<div>
+    <app-linechart title = "Water" (dateEvent)="dateSelect($event)"></app-linechart>
+</div>
+
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap = "20px" class = "stats-cards">
+
+    <mat-card fxFlex="25">
+        <app-widget-card   labelLeft = "Today" type = "water" [labelRight]="generationDaily" [percentage] = "percentageGenerationDaily" [energyBool]="true" [lowerLabel]="labelDaily"></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card  labelLeft = "Total" type = "water" [labelRight]="generationTotal" [percentage] = "percentageGenerationTotal"  [energyBool]="true" [lowerLabel]="labelTotal"></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card  labelLeft = "Today" type = "savings" [labelRight]="savingsDaily" [percentage] = "percentageSavingsDaily"  [energyBool]="false" [lowerLabel]="labelDaily"></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card labelLeft = "Total" type = "savo\ings"[labelRight]="savingsTotal" [percentage] = "percentageSavingsTotal" [energyBool]="false" [lowerLabel]="labelTotal"></app-widget-card>
+    </mat-card>
+</div>
+
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<div>
+  <mat-card>
+    <app-widget-barchart title = "Water" titleSecondary = "Collected"></app-widget-barchart>
+  </mat-card>
+</div>

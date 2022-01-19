@@ -1,0 +1,29 @@
+// .linechart{
+//     background-color:#C6C6C8FF;
+// }
+.mat-card{
+    border-radius: 20px !important;
+}
+body{
+    color: white;
+}
+
+.subheader{
+    display : flex;
+    justify-content: space-between;
+}
+
+.datepicker{
+    float: right;
+    margin-right: 5px;
+}
+
+.graphsubheader{
+    float: left;
+    margin-left: 5px;
+}
+
+mdb-icon {
+    vertical-align: middle;
+    margin-right : 10px
+}

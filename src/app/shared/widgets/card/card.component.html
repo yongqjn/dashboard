@@ -1,0 +1,35 @@
+
+<div class = "text">
+    <div class = "subheader">
+        <div>
+            <h2 *ngIf="!ifAir"><mdb-icon fas icon="calendar-day"></mdb-icon>{{labelLeft}}</h2>
+            <h2 *ngIf="ifAir"><mdb-icon fas icon="wind"></mdb-icon></h2>
+            <mat-divider></mat-divider>
+        </div>
+        <h2 class="result">{{labelRight}}</h2>
+    </div>
+    <div *ngIf="!ifAir" class = "lower">
+        <span>
+            <mdb-icon [ngStyle]="{'color': '#047af6'}" *ngIf="type==='water'" class = "fa-lg"  fas icon="tint"></mdb-icon>
+            <mdb-icon [ngStyle]="{'color': '#047af6'}" *ngIf="type==='solar'" class = "fa-lg"  fas icon="solar-panel"></mdb-icon>
+            <mdb-icon  [ngStyle]="{'color': '#29FB08 '}" *ngIf="type==='savings'" class = "fa-lg" fas icon="dollar-sign"></mdb-icon>
+            <mat-icon>trending_up</mat-icon>
+            <!-- <mat-icon >trending_down</mat-icon> -->
+        </span>
+        <span class="description">
+            {{percentage}} %
+        </span>
+    
+        <span class = "lowerLabel">of {{lowerLabel}}</span>
+    </div>
+    <div *ngIf="ifAir" class = "lower">
+        <span>
+            <mdb-icon [ngStyle]="{'color': '#047af6'}"  class = "fa-lg"  fas icon="temperature-low"></mdb-icon>
+        </span>
+        <span class = "description">
+            {{tempDescription}}
+        </span>
+    </div>
+
+
+</div>

@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  mockUrl: "http://localhost:3000/",
+  localUrl : "http://localhost:8080/api",
+  weatherUrl : "https://api.openweathermap.org/data/2.5/weather?q=",
+  WEATHER_API_KEY : "2d053ce1475c1e0120b93b5d2ade6906"
+
 };
 
 /*

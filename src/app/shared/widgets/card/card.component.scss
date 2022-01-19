@@ -1,0 +1,42 @@
+h2{
+    margin-top: 0;
+    margin-bottom : 10px;
+    font-family: Open Sans, sans-serif;
+}
+
+.mat-icon,
+.description{
+    color:green;
+    font-size : 1.8em
+}
+
+.mat-icon{
+    position : relative;
+    padding: 0 20px;
+    top : 5px
+}
+
+mdb-icon {
+    position : relative;
+    margin-right : 10px
+}
+
+
+.subheader{
+    display : flex;
+    justify-content: space-between;
+}
+
+.result{
+    margin-right:5px
+}
+
+.lower{
+    justify-content: space-between;
+    margin-top : 15px
+}
+
+.lowerLabel{
+    margin-right : 10px;
+   font-size : 1.8em 
+}

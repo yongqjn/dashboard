@@ -1,0 +1,41 @@
+<!-- <div>
+    <app-widget-area [data] = "bigchart"></app-widget-area>
+</div> -->
+
+<div>
+  <app-linechart title="Energy" (dateEvent)="dateSelect($event)"></app-linechart>
+</div>
+
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap = "20px" class = "stats-cards">
+
+    <mat-card fxFlex="25">
+        <app-widget-card   labelLeft = "Today" [labelRight]="generationDaily" [percentage] = "percentageGenerationDaily" [energyBool]="true" type = "solar"[lowerLabel]="labelDaily"></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card  labelLeft = "Total" [labelRight]="generationTotal" [percentage] = "percentageGenerationTotal"  [energyBool]="true" type = "solar" [lowerLabel]="labelTotal"></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card  labelLeft = "Today" [labelRight]="savingsDaily" [percentage] = "percentageSavingsDaily"  [energyBool]="false" type = "savings" [lowerLabel]="labelDaily"></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card labelLeft = "Total" [labelRight]="savingsTotal" [percentage] = "percentageSavingsTotal" [energyBool]="false"  type = "savings"[lowerLabel]="labelTotal"></app-widget-card>
+    </mat-card>
+</div>
+
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<div>
+  <mat-card>
+    <app-widget-barchart title = "Energy" titleSecondary = "Generated"></app-widget-barchart>
+  </mat-card>
+</div>
